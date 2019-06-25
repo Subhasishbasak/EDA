@@ -1,0 +1,5 @@
+rm(list=ls())
+df<-read.csv("regdata.csv")
+plot(df$x,df$y,col="red",lwd=2,cex=0.5,pch=16,xlab="x",ylab="y")
+sr<-lm(y ~ x, data=df)
+summary(sr)
